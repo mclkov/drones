@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/main.css"> 
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
+	
+	<title>Hello, world!</title>
+</head>
+<body>
+
+	 <!-- Optional JavaScript -->
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<div id="video" class="image-cover transitionBlur blur col-sm-12">
+		<video id="videoContent" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" width="100%" height="auto">
+			<source src="assets/droneteam_lq.m4v" type="video/mp4">
+		</video>
+	</div>
+
+	<div class="container">	
+			
+		     
+		<div class="row">
+
+			<div class="block col-sm-6">
+				
+				<div class="title">
+					<h2>About us</h2>
+				</div>		
+				<span class="text-justify">DRONETEAM.lt is a dedicated team of drone professionals. If your task specification involves engineering, drones or cinematography – we can do it! We offer full-stack 3D scanning services for asset managers, architects and real estate developers.
+			</div>
+
+			<div class="block col-sm-6">
+
+				<div class="title">
+					<h2>Our passion</h2>
+				</div>	
+
+				<span class="text-justify">
+ We see unlimited possibilities of combining the capabilities of autonomous flight machines and software development as well as taking the perfect aerial video shot. Remote controlled flights, autonomous flights, crop monitoring, photogrammetric 3D modelling from aerial photography and infrastructure inspection is just a tip of the iceberg.
+				</span>
+
+			</div>
+	
+
+			<div class="block col-sm-12 text-center">
+				<span>
+Have an idea where drones and software solutions could help to optimize your business? Contact us and we will help you achieve it!
+				</span>
+
+			</div>
+
+			<div class="block col-sm-12">
+				<div class="title">
+					<h2>What we do</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3 text-center">
+						<img src="assets/1.jpg">
+					</div>
+
+					<div class="col-sm-3 text-center">
+						<img src="assets/1.jpg">
+					</div>
+
+					<div class="col-sm-3 text-center">
+						<img src="assets/1.jpg">
+					</div>
+
+					<div class="col-sm-3 text-center">
+						<img src="assets/1.jpg">
+					</div>
+
+				</div> <!-- .row -->
+
+			</div>
+
+		</div> <!-- .row -->
+
+	</div> <!-- .container -->
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	 <script src="js/bootstrap.min.js"></script>
+
+	 <script>
+	 	$(document).ready(function () {
+	 		// $('#video').removeClass('blur').addClass('unblur'); // loadstart ?
+	 		$('#videoContent').on('loadeddata', function () {
+	 			$('#video').removeClass('blur').addClass('unblur').css({'padding' : 0});
+	 			$(this).show();
+	 		});
+
+	 		$('#video').removeClass('blur');
+	 	});
+	 </script>
+</body>
+</html>
