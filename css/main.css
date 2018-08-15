@@ -3,6 +3,11 @@ body
 	background: #eaeaea !important;
 }
 
+.expandBottom
+{
+	padding-bottom:15px !important;
+}
+
 .reduceSpace
 {
 	margin-right:-2.5%;
@@ -53,14 +58,38 @@ body
 
 	.container .imageBlock
 	{
-
+		margin-top: 10px;
+		border:0;
+		box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
 	}
+
+		.imageBlock .image-title
+		{
+			padding:10px 0;
+		}
 
 		.imageBlock img
 		{
 			max-width:100%;
-
+			box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 		}
+
+		.imageBlock .image-description
+		{
+			padding:5px 10px;
+			line-height: 1.6em;
+		}
+
+			.imageBlock .image-description:first-letter
+			{
+				font-size:1.8em;
+			}
+
+
+	.container .team
+	{
+
+	}
 
 #videoContent
 {
