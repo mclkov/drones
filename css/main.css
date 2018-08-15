@@ -3,6 +3,11 @@ body
 	background: #eaeaea !important;
 }
 
+.reduceSpace
+{
+	margin-right:-2.5%;
+}
+
 .transitionBlur
 {
 	transition: filter .5s;
@@ -34,7 +39,7 @@ body
 	{
 		background: #fff;
 		padding: 10px 15px;
-		margin-bottom:30px;
+		margin-bottom:50px;
 
 		box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 	}
@@ -45,6 +50,17 @@ body
 		margin-top:-32px;
 		margin-left:10px;
 	}
+
+	.container .imageBlock
+	{
+
+	}
+
+		.imageBlock img
+		{
+			max-width:100%;
+
+		}
 
 #videoContent
 {
