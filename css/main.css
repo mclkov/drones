@@ -54,6 +54,8 @@ body
 		position:relative;
 		margin-top:-32px;
 		margin-left:10px;
+
+		text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.15);
 	}
 
 	.container .imageBlock
@@ -85,11 +87,28 @@ body
 				font-size:1.8em;
 			}
 
-
-	.container .teamBlock
+	#team
 	{
-		
+		padding:20px 0;
+
+		box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.5);
+		border-top:1px #158394 solid;
 	}
+
+		#team .title
+		{
+			margin:0;
+
+			text-align:center;
+			color:#fff;
+			font-size:2em !important;
+			text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+		}
+
+		.container .teamBlock
+		{
+
+		}
 
 #videoContent
 {
