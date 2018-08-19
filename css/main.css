@@ -34,10 +34,12 @@ body
 	box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
-	.header .container
+	.header .navbar
 	{
 		z-index:2;
 		position:relative;
+		margin:0;
+		padding:0 10px;
 	}
 
 	.header .logo
