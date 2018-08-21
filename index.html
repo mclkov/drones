@@ -549,7 +549,7 @@ Our dedicated team of aerial video professionals will get you a perfect shot you
 	    isElementInView: function (element, fullyInView) {
 	        var pageTop = $(window).scrollTop();
 	        var pageBottom = pageTop + $(window).height();
-	        var elementTop = $(element).offset().top + 50;
+	        var elementTop = $(element).offset().top;
 	        var elementBottom = elementTop + $(element).height();
 
 	        if (fullyInView === true) {
@@ -564,7 +564,8 @@ Our dedicated team of aerial video professionals will get you a perfect shot you
 
 	 	$(document).ready(function () {
 	 		// $('#video').removeClass('blur').addClass('unblur'); // loadstart ?
-	 		$('#videoContent').on('loadeddata', function () {
+
+	 		$('#videoContent').bind('loadeddata', function () {
 	 			$('#video').removeClass('blur').addClass('unblur').css({'padding' : 0});
 	 			$(this).show();
 	 		});
