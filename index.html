@@ -372,7 +372,7 @@ Our dedicated team of aerial video professionals will get you a perfect shot you
 					</div> <!-- .col 6 -->
 
 					<div class="col-sm-12">
-						<iframe
+						<iframe id="iframeMap"
 						  width="100%"
 						  height="500"
 						  frameborder="0" style="border:0"
@@ -541,6 +541,27 @@ Our dedicated team of aerial video professionals will get you a perfect shot you
 	 <script src="js/bootstrap.min.js"></script>
 
 	 <script>
+	function Utils() {
+
+	}
+	Utils.prototype = {
+	    constructor: Utils,
+	    isElementInView: function (element, fullyInView) {
+	        var pageTop = $(window).scrollTop();
+	        var pageBottom = pageTop + $(window).height();
+	        var elementTop = $(element).offset().top + 50;
+	        var elementBottom = elementTop + $(element).height();
+
+	        if (fullyInView === true) {
+	            return ((pageTop < elementTop) && (pageBottom > elementBottom));
+	        } else {
+	            return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+	        }
+	    }
+	};
+
+	var Utils = new Utils();
+
 	 	$(document).ready(function () {
 	 		// $('#video').removeClass('blur').addClass('unblur'); // loadstart ?
 	 		$('#videoContent').on('loadeddata', function () {
@@ -549,6 +570,34 @@ Our dedicated team of aerial video professionals will get you a perfect shot you
 	 		});
 
 	 		$('#video').removeClass('blur');
+	 	});
+
+	 	var frameLastStateVisible = true;
+	 	$(window).scroll(function () {
+	 		var iframeObj = $('#iframeMap');
+	 		var isElementInView = Utils.isElementInView(iframeObj, false);
+
+	 		var iframeUrl = 'about:blank';
+	 		if(isElementInView == true)
+	 		{
+	 			iframeUrl = 'http://map.droneteam.lt/';
+	 		}
+
+
+	 		// console.log(iframeVisible +' == '+ isElementInView);
+
+
+	 		if((isElementInView == true && frameLastStateVisible == false) || (isElementInView == false && frameLastStateVisible == true))
+	 		{
+	 			iframeObj.attr({'src' : iframeUrl});
+	 		}
+
+	 		if(isElementInView == true)
+	 		{
+	 			frameLastStateVisible = true;
+	 		}else{
+	 			frameLastStateVisible = false;
+	 		}
 	 	});
 	 </script>
 </body>
